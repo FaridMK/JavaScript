@@ -23,6 +23,9 @@ header {
     border-radius: 4px
 }
 
+.all-cat {
+    padding-left: 0;
+}
 /* section {
     width: 480px;
         padding-left: 15px;
@@ -34,21 +37,18 @@ header {
 li {
     padding-top: 15px;
     padding-bottom: 15px;
-    /* padding-left: 15px; */
+    padding-left: 15px;
+    padding-right: 15px;
     list-style: none;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 500;
     border-bottom: 1px solid rgba(215, 207, 207, 0.925);
 }
 
-ul .details {
-    display: inline-block;
-    padding-right: 12px;
-    margin-top: 10px;
+.details {
     font-size: 15px;
     font-weight: 400;
     font-style: italic;
     color: rgb(93, 104, 104);
-    margin-left: 5px;
-    align-items: flex-end;
+    
 }
