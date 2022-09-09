@@ -2,6 +2,8 @@ body {
     background-color: whitesmoke;
     padding-right: 15px;
     padding-left: 15px;
+    margin-left: 0;
+    margin-right: 0;
 }
 header {
     display: flex;
@@ -45,10 +47,20 @@ li {
     border-bottom: 1px solid rgba(215, 207, 207, 0.925);
 }
 
-.details {
+span {
     font-size: 15px;
     font-weight: 400;
     font-style: italic;
     color: rgb(93, 104, 104);
     
+}
+
+ul .syntax {
+    color: rgb(182, 89, 13);
+}
+
+.syntax-item {
+    font-style: italic;
+    font-size: 17px;
+    color: rgb(5, 88, 111);
 }
