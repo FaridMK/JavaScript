@@ -15,7 +15,6 @@ header {
 }
 
 .header {
-    /* display: inline-block; */
     font-size: 25px;
     padding: 12px;
     margin-bottom: -2px;
@@ -25,37 +24,26 @@ header {
     border-radius: 4px
 }
 
-.all-cat {
-    padding-left: 0;
-}
-/* section {
-    width: 480px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-} */
 
 li {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    list-style: none;
-    font-size: 25px;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(215, 207, 207, 0.925);
-}
-
-span {
     font-size: 15px;
     font-weight: 400;
     font-style: italic;
     color: rgb(93, 104, 104);
-    
+    border-bottom: 1px solid rgba(215, 207, 207, 0.925);
+    list-style: none;
 }
 
-ul .syntax {
+span {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* ul .syntax {
     color: rgb(182, 89, 13);
 }
 
@@ -63,4 +51,15 @@ ul .syntax {
     font-style: italic;
     font-size: 17px;
     color: rgb(5, 88, 111);
-}
+} */
+
+/* .all-cat {
+    padding-left: 0;
+} */
+/* section {
+    width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+} */
