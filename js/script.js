@@ -217,14 +217,121 @@ const infoTab = [
     syntaxis: '/// вызываем функцию с аргументами /// function nameFn(2, 3. 4); ',
 },
 {
-    name: 'alert',
-    information: '... some information about this name and etc.',
-    syntaxis: 'alert(x)',
+    name: 'return',
+    information: '... оператор return используется для передачи значения из тела функции во внешний код. Когда интерпретатор встречает return, он сразу же выходит из функции (прекращает её выполнение), и возвращает указанное значение в то место кода, где функция была вызвана. Оператор return без явно указанного значения возвращает специальное значение undefined. При отсутствии return в теле функции, она все равно вернёт undefined.',
+    syntaxis: 'return;',
 },
 {
-    name: 'prompt',
-    information: '... some information about this name and etc.',
+    name: 'Array.from()',
+    information: '... метод создаст массив из псевдомассива. ',
     syntaxis: 'prompt(x)',
+},
+{
+    name: 'arguments',
+    information: '... доступ к списку всех аргументов можно получить при помощи специальной переменной arguments, которая доступна только внутри функции и хранит все аргументы как псевдомассив. Псевдомассив - коллекция, со свойством length и возможностью обратиться к элементу по индексу, но отсутствием большинства методов для работы с массивом.',
+    syntaxis: 'cconfirm(x)',
+},
+{
+    name: 'Паттерн «Ранний возврат»',
+    information: '... это способ использовать возможность досрочного возврата из функции с помощью оператора return. Используя этот приём мы получаем более чистый, плоский и понятный код, который легче рефакторить.',
+    syntaxis: 'return;',
+    },
+{
+    name: 'function expression',
+    information: '... Функциональное выражение (function expression) - обычное объявление переменной, значение которой будет функция. Альтернативный способ объявления функции. Различие в том, что функциональное выражение нельзя вызвать до места его создания, только после, потому что это буквально объявление const переменной.',
+    syntaxis: 'const multiply = function (x, y, z) { console.log(`Результат умножения равен ${x * y * z}`); };',
+    },
+
+{
+    name: 'Область видимости (scope)',
+    information: '... механизм который определяет доступность переменных в исполняемом коде.',
+    syntaxis: '',
+    },
+    {
+    name: 'Цепочка областей видимости (scope chain) ',
+    information: '... области видимости образуют иерархию, так что дочерние области имеют доступ к переменным из родительских областей, но не наоборот.',
+    syntaxis: '',
+},
+{
+    name: 'Глобальная область видимости',
+    information: '... Переменные, объявленные на самом верхнем уровне, то есть вне любых конструкций вроде if, while, for и функций, находятся в глобальной области видимости и доступны везде после их объявления.',
+    syntaxis: '',
+},
+{
+    name: 'Блочная область видимости',
+    information: '... Переменные, объявленные внутри инструкций if, for, функций и других блоков кода обрамлённых фигурными скобками {}, находятся в блочной области видимости и доступны только внутри этого блока кода или вложенных в него.',
+    syntaxis: '',
+},
+{
+    name: 'Стек',
+    information: '... структура данных, которая работает по принципу LIFO (Last-In-First-Out), то есть последним пришёл - первым вышел. Последнее, что добавляется на стек, будет удалено из него первым, значит можно добавить или удалить элементы только из верхушки стека.',
+    syntaxis: '',
+},
+{
+    name: 'Стек вызовов (call stack)',
+    information: '... это механизм для отслеживания текущего местонахождения интерпретатора в коде, который вызывает несколько функций. Какая из функций выполняется на данный момент, какие функции вызываются изнутри выполняемой функции, какая будет вызвана следующей и т. д.',
+    syntaxis: '',
+    },
+{
+    name: 'Stack frame (кадр стека, запись стека)',
+    information: '... структура которая добавляется на стек при вызове функции. Хранит служебную информацию, например имя функции и номер строки, в которой произошел вызов.',
+    syntaxis: '',
+    },
+
+{
+    name: 'Переполнение стека вызовов',
+    information: '... Иногда в консоли можно увидеть ошибку "Uncaught RangeError: Maximum call stack size exceeded" - переполнение стека (stack overflow). Это может произойти при неправильном использовании рекурсии или зацикливании вызовов функций, то есть, если идут бесконечные вызовы функций и результат не возвращается, то стек увеличивается. По достижению предела количества записей стека и возникнет такая ошибка и скрипт «падает».',
+    syntaxis: '',
+    },
+    {
+    name: 'Объекты',
+    information: '... Объекты позволяют описать и сгруппировать характеристики некоторой сущности - пользователя, книги, продукта в магазине, чего угодно. Объекты ещё называют словарями, то есть они содержат термины (свойства) и их определения (значения).',
+    syntaxis: 'Для объявления используются фигурные скобки {} - литерал объекта.',
+},
+{
+    name: 'for...in',
+    information: '... Для перебора объектов используется специальный цикл for...in, который перебирает ключи объекта object.',
+    syntaxis: 'for (key in object) { // инструкции } ',
+},
+{
+    name: 'Object.create()',
+    information: '... метод создаёт и возвращает новый объект, связывая его с другим объектом.',
+    syntaxis: 'Object.create(otherObject)',
+},
+{
+    name: 'hasOwnProperty()',
+    information: '... Для того чтобы узнать есть в объекте собственное свойство или нет, используется метод hasOwnProperty(key), который возвращает true или false.',
+    syntaxis: 'console.log(dog.hasOwnProperty("name")); // true',
+},
+{
+    name: 'Object.keys()',
+    information: '... у встроенного класса Object есть несколько полезных методов для работы с объектами. Первый из них это Object.keys(obj), который принимает объект и возвращает массив ключей его собственных свойств. Если в объекте нет свойств, метод вернёт пустой массив.',
+    syntaxis: 'const keys = Object.keys(book); console.log(keys);',
+    },
+{
+    name: 'Object.values()',
+    information: '... метод Object.values(obj) возвращает массив значений его собственных свойств. Если в объекте нет свойств, метод Object.values(obj) вернёт пустой массив.',
+    syntaxis: 'const values = Object.values(book); console.log(values);',
+    },
+{
+    name: 'Object.entries()',
+    information: '... Метод возвращает массив записей, каждым элементом которого будет еще один массив из 2-х элементов: имени свойства и значения этого свойства из объекта obj.',
+    syntaxis: 'const entries = Object.entries(book); console.log(entries); // [["title", "The Last Kingdom"], ["author", "Bernard Cornwell"], ["rating", 8.38]]',
+},
+    {
+    name: '... (spread)',
+    information: '... Операция "... (spread)" позволяет распылить коллекцию элементов (массив, строку или объект) в место, где ожидается набор отдельных значений.',
+    syntaxis: 'const temps = [14, -4, 25, 8, 11]; console.log(...temps); ',
+},
+{
+    name: 'spread: создание нового массива',
+    information: '... Операция ... (spread) позволяет создать копию массива или «склеить» произвольное количество массивов в один новый.',
+    syntaxis: 'const numbers = [1, -5, 12, 22, -33]; const moreNumbers = [3, 49, 20, -4]; const copyOfNumbers = [...numbers]; const newNumbers = [...numbers, ...moreNumbers]; console.log(copyOfNumbers); console.log(newNumbers);',
+},
+{
+    name: 'spread: создание нового объекта',
+    information: '... Операция ... (spread) позволяет распылить свойства произвольного количества объектов в один новый.',
+    syntaxis: 'const first = { A: 5, B: 10 }; const second = { C: 15 }; const third = { ...first, ...second }; console.log(third); // { A: 5, B: 10, C: 15 }',
 },
 {
     name: 'confirm',
@@ -232,169 +339,61 @@ const infoTab = [
     syntaxis: 'cconfirm(x)',
 },
 {
-    name: 'NaN',
-    information: '... some information about this name and etc.',
-    syntaxis: 'NaN(x)',
+    name: 'forEach',
+    information: '... перебирающий метод массива. Поэлементно перебирает массив. Вызызвает коллбек-функцию для каждого элемента массива. Ничего не возвращает. Прервать выполнение метода forEach нельзя, он всегда перебирает массив до конца.',
+    syntaxis: 'массив.forEach(function callback(element, index, array) { // Тело коллбек-функции });',
     },
 {
-    name: 'rty',
-    information: '... rrrrrrrrtion about this name and etc.',
-    syntaxis: 'okkkkkk',
-    },
-
-{
-    name: 'last',
-    information: '... some information about this name and etc.',
-    syntaxis: 'lasttttttttttt)',
-    },
-    {
-    name: 'console.log',
-    information: '... some information about this name and etc.',
-    syntaxis: 'console.log(x)',
-},
-{
-    name: 'alert',
-    information: '... some information about this name and etc.',
-    syntaxis: 'alert(x)',
-},
-{
-    name: 'prompt',
-    information: '... some information about this name and etc.',
-    syntaxis: 'prompt(x)',
-},
-{
-    name: 'confirm',
-    information: '... some information about this name and etc.',
-    syntaxis: 'cconfirm(x)',
-},
-{
-    name: 'NaN',
-    information: '... some information about this name and etc.',
-    syntaxis: 'NaN(x)',
-    },
-{
-    name: 'rty',
-    information: '... rrrrrrrrtion about this name and etc.',
-    syntaxis: 'okkkkkk',
+    name: 'Стрелочные функции',
+    information: '... Стрелочные функции имеют сокращённый, более лаконичный синтаксис. Все стрелки создаются как функциональное выражение, и если функция не анонимна, то она должна быть присвоена переменной. Ключевое слово function не используется, вместо этого сразу идёт объявление параметров, за которыми следует символ => и тело функции. Если параметров несколько, то они перечисляются через запятую в круглых скобках, между знаками равно = и стрелкой =>. Если параметр один, его объявление может быть без круглых скобок. Если параметров нет, то обязательно должны быть пустые круглые скобки.',
+    syntaxis: 'const add = (a, b, c) => { return a + b + c; };',
     },
 
 {
-    name: 'last',
-    information: '... some information about this name and etc.',
-    syntaxis: 'lasttttttttttt)',
+    name: 'map()',
+    information: '... метод map(callback) используется для трансформации массива. Он вызывает коллбек-функцию для каждого элемента исходного массива, а результат её работы записывает в новый массив, который и будет результатом выполнения метода. ',
+    syntaxis: 'массив.map((element, index, array) => { // Тело коллбек-функции });',
     },
     {
-    name: 'console.log',
-    information: '... some information about this name and etc.',
-    syntaxis: 'console.log(x)',
+    name: 'flatMap()',
+    information: '... метод flatMap(callback) аналогичен методу map(), но применяется в случаях когда результат это многомерный массив который необходимо «разгладить».',
+    syntaxis: 'массив.flatMap((element, index, array) => { // Тело коллбек-функции });',
 },
 {
-    name: 'alert',
-    information: '... some information about this name and etc.',
-    syntaxis: 'alert(x)',
+    name: 'filter()',
+    information: '... метод filter(callback) используется для единственной операции - фильтрации массива, то есть когда необходимо выбрать более одного элемента из коллекции по какому-то критерию. Возвращает новый массив. Добавляет в возвращаемый массив элементы которые удовлетворяют условию коллбек-функции. Если коллбек вернул true элемент добавляется в возвращаемый массив. Если коллбек вернул false элемент не добавляется в возвращаемый массив. Если ни один элемент не удовлетворил условию, возвращает пустой массив.',
+    syntaxis: 'const positiveValues = values.filter(value => value >= 0); console.log(positiveValues); // [51, 27, 21, 42]',
 },
 {
-    name: 'prompt',
-    information: '... some information about this name and etc.',
-    syntaxis: 'prompt(x)',
+    name: 'find()',
+    information: '... если метод filter(callback) используется для поиска всех элементов удовлетворяющим условию, то метод find(callback) позволяет найти и вернуть первый подходящий элемент, после чего перебор массива прекращается. То есть он ищет до первого совпадения.',
+    syntaxis: 'массив.find((element, index, array) => { // Тело коллбек-функции });',
 },
 {
-    name: 'confirm',
-    information: '... some information about this name and etc.',
-    syntaxis: 'cconfirm(x)',
+    name: 'findIndex()',
+    information: '... метод findIndex(callback) это современная замена методу indexOf(). Позволяет выполнять поиск по более сложным условиям чем просто равенство. Используется как для поиска в массиве примитивов, так и в массиве обьектов',
+    syntaxis: 'массив.findIndex((element, index, array) => { // Тело коллбек-функции });',
 },
 {
-    name: 'NaN',
-    information: '... some information about this name and etc.',
-    syntaxis: 'NaN(x)',
+    name: 'every()',
+    information: '... проверяет проходят ли все элементы массива тест предоставляемый коллбек-функцией. Возвращает true или false. ',
+    syntaxis: 'массив.every((element, index, array) => { // Тело коллбек-функции });',
     },
 {
-    name: 'rty',
-    information: '... rrrrrrrrtion about this name and etc.',
-    syntaxis: 'okkkkkk',
+    name: 'some()',
+    information: '... проверяет проходит ли хотя бы один элемент массива тест предоставляемый коллбек-функцией. Возвращает true или false.',
+    syntaxis: 'массив.some((element, index, array) => { // Тело коллбек-функции });',
     },
 
 {
-    name: 'last',
-    information: '... some information about this name and etc.',
-    syntaxis: 'lasttttttttttt)',
+    name: 'reduce',
+    information: '... метод reduce(callback, initialValue) используется для последовательной обработки каждого элемента массива с сохранением промежуточного результата, как аккумулятор.',
+    syntaxis: 'массив.reduce((previousValue, element, index, array) => { // Тело коллбек-функции}, initialValue);',
     },
     {
-    name: 'console.log',
-    information: '... some information about this name and etc.',
-    syntaxis: 'console.log(x)',
-},
-{
-    name: 'alert',
-    information: '... some information about this name and etc.',
-    syntaxis: 'alert(x)',
-},
-{
-    name: 'prompt',
-    information: '... some information about this name and etc.',
-    syntaxis: 'prompt(x)',
-},
-{
-    name: 'confirm',
-    information: '... some information about this name and etc.',
-    syntaxis: 'cconfirm(x)',
-},
-{
-    name: 'NaN',
-    information: '... some information about this name and etc.',
-    syntaxis: 'NaN(x)',
-    },
-{
-    name: 'rty',
-    information: '... rrrrrrrrtion about this name and etc.',
-    syntaxis: 'okkkkkk',
-    },
-
-{
-    name: 'last',
-    information: '... some information about this name and etc.',
-    syntaxis: 'lasttttttttttt)',
-    },
-    {
-    name: 'console.log',
-    information: '... some information about this name and etc.',
-    syntaxis: 'console.log(x)',
-},
-{
-    name: 'alert',
-    information: '... some information about this name and etc.',
-    syntaxis: 'alert(x)',
-},
-{
-    name: 'prompt',
-    information: '... some information about this name and etc.',
-    syntaxis: 'prompt(x)',
-},
-{
-    name: 'confirm',
-    information: '... some information about this name and etc.',
-    syntaxis: 'cconfirm(x)',
-},
-{
-    name: 'NaN',
-    information: '... some information about this name and etc.',
-    syntaxis: 'NaN(x)',
-    },
-{
-    name: 'rty',
-    information: '... rrrrrrrrtion about this name and etc.',
-    syntaxis: 'okkkkkk',
-    },
-
-{
-    name: 'last',
-    information: '... some information about this name and etc.',
-    syntaxis: 'lasttttttttttt)',
-    },
-    {
-    name: 'console.log',
-    information: '... some information about this name and etc.',
-    syntaxis: 'console.log(x)',
+    name: 'sort()',
+    information: '... метод sort() сортирует элементы массива, но в отличии от остальных перебирающих методов, он сортирует исходный массив.',
+    syntaxis: 'const scores = [27, 2, 41, 4, 7, 3, 75]; scores.sort(); console.log(scores); // [2, 27, 3, 4, 41, 7, 75]',
 },
 {
     name: 'alert',
